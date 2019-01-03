@@ -16,3 +16,21 @@ pipeline {
         }
     }
 }
+
+
+
+
+
+Probarlo con PHP
+También abre un Docker para ejecutarlo
+
+pipeline {
+    agent { docker { image 'php' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'php --version'
+            }
+        }
+    }
+}
